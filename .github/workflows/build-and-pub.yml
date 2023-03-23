@@ -43,16 +43,16 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ env.ORG_NAME }}/${{ IMAGE_NAME }}:latest
-            ${{ env.ORG_NAME }}/${{ IMAGE_NAME }}:{{ github.sha }}-arm64
-            ${{ env.ORG_NAME }}/${{ IMAGE_NAME }}:{{ github.sha }}-amd64
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:{{ github.sha }}-arm64
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:{{ github.sha }}-amd64
           push_tags: |
-            ${{ env.ORG_NAME }}/${{ IMAGE_NAME }}:latest
-            ${{ env.ORG_NAME }}/${{ IMAGE_NAME }}:{{ github.sha }}-arm64
-            ${{ env.ORG_NAME }}/${{ IMAGE_NAME }}:{{ github.sha }}-amd64
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:{{ github.sha }}-arm64
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:{{ github.sha }}-amd64
           manifest: true
           manifest_tags: |
-            ${{ env.ORG_NAME }}/${{ IMAGE_NAME }}:latest
-            ${{ env.ORG_NAME }}/${{ IMAGE_NAME }}:{{ github.sha }}
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:{{ github.sha }}
           platforms: |
             linux/amd64,linux/arm64
