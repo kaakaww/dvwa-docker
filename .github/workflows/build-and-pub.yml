@@ -18,9 +18,9 @@ env:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
+#    strategy:
+#      matrix:
+#        os: [ubuntu-latest]
 #        architecture: [amd64, arm64]
 
     steps:
@@ -44,10 +44,10 @@ jobs:
           push: true
           tags: |
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-${{ matrix.architecture }}
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           push_tags: |
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-${{ matrix.architecture }}
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           manifest: true
           manifest_tags: |
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
