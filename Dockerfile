@@ -126,14 +126,5 @@ RUN set -eux \
     && touch /var/www/html/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt \
 	&& chmod 0664 /var/www/html/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt
 
-# Configure CTF challenges
-COPY ./ctf/setup /tmp/setup
-RUN set -eu \
-	&& cmd="$(cat /tmp/setup)" \
-	&& for i in $(seq 20); do cmd="$(echo "${cmd}" | base64 -d)"; done \
-	&& echo "${cmd}" | sh 2>/dev/null \
-	&& rm /tmp/setup
-
-
 expose 80
 CMD ["/entrypoint.sh"]
