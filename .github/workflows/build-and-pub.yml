@@ -44,12 +44,10 @@ jobs:
           push: true
           tags: |
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-arm64
-            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-amd64
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-${{ matrix.architecture }}
           push_tags: |
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-arm64
-            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-amd64
+            ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-${{ matrix.architecture }}
           manifest: true
           manifest_tags: |
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
