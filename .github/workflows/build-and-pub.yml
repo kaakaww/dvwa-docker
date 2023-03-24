@@ -21,7 +21,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        architecture: [amd64, arm64]
+#        architecture: [amd64, arm64]
 
     steps:
       - name: Checkout Code
@@ -53,4 +53,5 @@ jobs:
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           platforms: |
-            linux/amd64,linux/arm64
+#              ${{ matrix.architecture }}
+            linux/amd64,linux/arm64,linux/arm/v6
