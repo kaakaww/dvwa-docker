@@ -1,13 +1,8 @@
-name: Build and Publish Docker Image
+name: Build and Publish Docker Image Weekly
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: "0 1 * * *"
-  workflow_dispatch:
-
+    - cron: "0 1 * * Sun"
 
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -49,4 +44,4 @@ jobs:
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:latest
             ${{ env.ORG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           platforms: |
-            linux/amd64,linux/arm64,linux/arm/v6
+            linux/amd64,linux/arm64,linux/arm/v7
