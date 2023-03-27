@@ -93,7 +93,7 @@ After running `docker run` you can access DVWA in your browser via:
 ## :star: Features
 
 * :whale: - Works out of the box on Linux, MacOS and Windows via Docker
-* :repeat: - Docker images are [updated every Sunady](https://hub.docker.com/r/kaakaww/dvwa-docker) against [DVWA](https://github.com/digininja/DVWA) main branch
+* :repeat: - Docker images are [updated every Sunday](https://hub.docker.com/r/kaakaww/dvwa-docker) against [DVWA](https://github.com/digininja/DVWA) main branch
 * :open_file_folder: - Bundles [Adminer](https://www.adminer.org/) to inspect the database
 
 
