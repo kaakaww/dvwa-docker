@@ -4,7 +4,7 @@
 # docker run -rm -p 8080:80 this-dvwa
 # Login to http://localhost:8080 with default credentials
 
-FROM php:8.1-apache as builder
+FROM php:8.2-apache as builder
 # Set PHP version
 ENV VERSION=8.1
 # Install requirements
@@ -37,7 +37,7 @@ RUN set -eux \
 	&& curl -sS --fail -k -L "${URL}" > /adminer.php
 
 
-FROM php:8.1-apache
+FROM php:8.2-apache
 
 # Satisfy MariaDB requirements
 RUN set -eux \
