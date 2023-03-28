@@ -11,7 +11,7 @@
 
 
 [![Commit Build](https://github.com/kaakaww/dvwa-docker/actions/workflows/commit-build-and-pub.yml/badge.svg)](https://github.com/kaakaww/dvwa-docker/actions/workflows/commit-build-and-pub.yml)
-[![Weekly Build](https://github.com/kaakaww/dvwa-docker/workflows/weekly-build-and-pub.yml/badge.svg)](https://github.com/kaakaww/dvwa-docker/actions/workflows/commit-build-and-pub.yml)
+[![Weekly Build](https://github.com/kaakaww/dvwa-docker/actions/workflows/weekly-build-and-pub.yml/badge.svg)](https://github.com/kaakaww/dvwa-docker/actions/workflows/weekly-build-and-pub.yml)
 [![](https://img.shields.io/docker/pulls/kaakaww/dvwa-docker.svg)](https://hub.docker.com/r/kaakaww/dvwa-docker)
 [![](https://img.shields.io/badge/github-kaakaww%2Fdvwa--docker-red.svg)](https://github.com/kaakaww/dvwa-docker "github.com/kaakaww/dvwa-docker")
 [![License](https://img.shields.io/badge/license-MIT-%233DA639.svg)](https://opensource.org/licenses/MIT)
@@ -38,7 +38,7 @@ We publish an amd64, arm64, and arm/v7 version of this image weekly. If you want
 
 The following Docker image tags are rolling releases and are built and updated every Sunday.
 
-[![weekly](https://github.com/kaakaww/dvwa-docker/workflows/weekly-build-and-pub.yml/badge.svg)](https://github.com/kaakaww/dvwa-docker/actions/workflows/commit-build-and-pub.yml)
+[![weekly](https://github.com/kaakaww/dvwa-docker/actions/workflows/weekly-build-and-pub.yml/badge.svg)](https://github.com/kaakaww/dvwa-docker/actions/workflows/weekly-build-and-pub.yml)
 
 
 | Docker Tag            | Git Ref | PHP | Available Architectures                      |
